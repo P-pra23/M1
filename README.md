@@ -211,21 +211,37 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 ## PROGRAM:
 ```
 #include <stdio.h>
-int main()
-{
-    float a,b,c,d,e,f,t,av;
-    scanf("%f%f%f%f%f%f",&a,&b,&c,&d,&e,&f);
-    t=a+b+c+d+e+f;
-    printf("Total marks = %.2f",t);
-    av=t/6;
-    printf("\nAverage marks = %.2f \nPercentage = %.2f",av,av);
+
+int main() {
+    int m1, m2, m3;
+    float tot, per;
+    printf("Enter marks for 3 subjects: ");
+    scanf("%d %d %d", &m1, &m2, &m3);
+    tot = m1 + m2 + m3;
+    per = tot / 3.0;
+    printf("Total marks = %.2f\n", tot);
+    printf("Percentage = %.2f\n", per);
+    if (m1 >= 40 && m2 >= 40 && m3 >= 40) {
+        if (per >= 60)
+            printf("Division = First\n");
+        else if (per >= 48)
+            printf("Division = Second\n");
+        else if (per >= 36)
+            printf("Division = Pass\n");
+        else
+            printf("Division = Fail\n");
+    } else {
+        printf("Division = Fail\n");
+    }
+
     return 0;
-    
 }
+
 ```
 ## OUTPUT:
 
-![image](https://github.com/user-attachments/assets/dd6cfc05-541f-4204-a5bd-e48b288bbb3a)
+![image](https://github.com/user-attachments/assets/91e73bac-e79a-40bc-b8f6-e497db5027fe)
+
 
 
 ## RESULT:
